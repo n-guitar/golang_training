@@ -26,3 +26,17 @@ http://www.geocities.jp/m_hiroi/golang/abcgo13.html
 # ioutil.ReadFile
 http://cuto.unirita.co.jp/gostudy/post/standard-library-file-io/
 ioutil.ReadFile関数はファイルからすべてのデータを入力する関数
+
+# RGBA
+goでの使い方
+http://twinbird-htn.hatenablog.com/entry/2017/04/23/001743
+カラーチャート
+https://www.scollabo.com/banban/lectur/websafe.html
+
+# エラー
+too few values in struct initializer
+https://qiita.com/cotrpepe/items/b8e7f70f27813a846431
+
+# ioutil.ReadAll
+https://waman.hatenablog.com/entry/2017/10/05/132727
+ioutil.ReadAll 関数は、引数の io.Reader から内容を全て読み込んでバイトスライスとして返します：
