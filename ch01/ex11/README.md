@@ -1,4 +1,4 @@
-# 以下サイトで実
+# 以下サイトで実施
 https://www.alexa.com/topsites
 
 ```bash
