@@ -1,0 +1,38 @@
+package main
+
+import (
+	"bytes"
+	"fmt"
+)
+
+func main() {
+	stg1 := "test"
+	stg2 := "test"
+	bfcompare1, bfcompare2 := CovSlice(stg1, stg2)
+	fmt.Printf("%q\n%q\n", bfcompare1, bfcompare2)
+	afcompare1 := []byte(bfcompare1)
+	afcompare2 := []byte(bfcompare2)
+	fmt.Printf("%q\n%q\n", afcompare1, afcompare2)
+	compare := bytes.Compare(afcompare1, afcompare2) == 0
+	fmt.Print(compare)
+
+}
+
+func CovSlice(s1, s2 string) (string, string) {
+	var runes1, runes2 []rune
+	var covslice1, covslice2 string
+
+	for _, r := range s1 {
+		runes1 = append(runes1, r)
+		covslice1 = string(runes1)
+
+	}
+	for _, r := range s2 {
+		runes2 = append(runes2, r)
+		covslice2 = string(runes2)
+	}
+	// covslice1 := fmt.Printf("%s\n", runes1)
+	// covslice2 := fmt.Printf("%s\n", runes2)
+	return covslice1, covslice2
+	// return runes1, runes2
+}
