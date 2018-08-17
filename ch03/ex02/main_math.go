@@ -59,17 +59,9 @@ func f(x, y float64) float64 {
 	r := math.Hypot(x, y) // distance from (0,0) 引数の二乗和の平方根を返す
 	if math.IsInf(r, 0) == true {
 	}
-	return math.Sin(r) / 10
+	// return math.Sin(r) / 10
+	// return math.Sin(r) / 10 * math.Cos(r)
+	// Powは、x**y、ベースxをy値で累乗した値を返します。
+	// 卵の箱
+	return math.Pow(1.1, math.Sin(x)) * math.Pow(1.1, math.Sin(y))
 }
-
-//	func IsInf(f float64, sign int) bool
-//	IsInfは、fがsignと一致する無限大であるかを返します。sign > 0のときはfが正の無限大かを返し、sign < 0のときはfが負の無限大かを返します。sign == 0のときはどちらかの無限大であるかを返します。
-//	参考ページ　http://y0m0r.hateblo.jp/entry/20140921/1411296684
-
-// func IsInfCheck(f float64, sign int) float64 {
-//	if math.IsInf(f, 0) == true {
-//	}
-//	return f
-//}
-
-//!-
