@@ -34,7 +34,7 @@ func main() {
 func clockWall(conn net.Conn, timezone string, ch chan<- string) {
 	scanner := bufio.NewScanner(conn)
 	for scanner.Scan() {
-		//ch <- fmt.Sprintf(timezone, scanner.Text())
+		//\rで改行を
 		ch <- fmt.Sprintf("\r%s:%s   ", timezone, scanner.Text())
 	}
 }
